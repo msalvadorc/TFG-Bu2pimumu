@@ -114,6 +114,10 @@ def plot_one_pandas_histogram(df, col, bin_num, savefig, save_directory, suffix)
 
 
 def save_to_root(pandas_df, save_directory, outputfile, suffix):
+	'''This function saves the pandas dataframe pandas_df to a ROOT file
+	in the specified directory save_directory and with the file name
+	{ouputfile}{suffix}.root
+	'''
 	print('********************************')
 	print('SAVING DF TO ROOT FILE...')
 	selected_dat_ROOT = R.RDF.FromPandas(pandas_df) #Get PD df to ROOT df
@@ -131,6 +135,10 @@ def save_to_root(pandas_df, save_directory, outputfile, suffix):
 
 
 def save_branch_to_root(pandas_df, branch, save_directory, outputfile, suffix):
+	'''This function saves a column (branch) in the pandas dataframe pandas_df 
+	to a ROOT file in the specified directory save_directory and with the file name
+	{ouputfile}{suffix}.root
+	'''
     print('********************************')
     print('SAVING DF TO ROOT FILE...')
 
