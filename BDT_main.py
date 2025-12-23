@@ -438,10 +438,12 @@ if Bu_plot:
 if FoM:
 
 	def exponential(c, x):
+		# Function provided by Ernest Olivart (eolivart@icc.ub.edu)
 		import math
 		return math.e**(c*x)
 
 	def bkg_yield_in_signal_window(sideband_yield, c, cerr, signal_window, sideband_window): #sideband_yield: initial number of events that enter
+		# Function provided by Ernest Olivart (eolivart@icc.ub.edu)
 		integral_1 = (exponential(c, signal_window[1])-exponential(c, signal_window[0]))
 		integral_2 = (exponential(c, sideband_window[1])-exponential(c, sideband_window[0]))
 		di1 = abs(exponential(c, signal_window[1])*signal_window[1]-exponential(c, signal_window[0])*signal_window[0])*cerr
